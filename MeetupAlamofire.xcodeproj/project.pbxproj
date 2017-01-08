@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9E22769F1E22A9C40045B5AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E22769E1E22A9C40045B5AB /* AppDelegate.swift */; };
+		9E2276A11E22A9C40045B5AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2276A01E22A9C40045B5AB /* ViewController.swift */; };
+		9E2276A41E22A9C40045B5AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E2276A21E22A9C40045B5AB /* Main.storyboard */; };
+		9E2276A61E22A9C40045B5AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E2276A51E22A9C40045B5AB /* Assets.xcassets */; };
+		9E2276A91E22A9C40045B5AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E2276A71E22A9C40045B5AB /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9E22769B1E22A9C40045B5AB /* MeetupAlamofire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetupAlamofire.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E22769E1E22A9C40045B5AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9E2276A01E22A9C40045B5AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9E2276A31E22A9C40045B5AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9E2276A51E22A9C40045B5AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9E2276A81E22A9C40045B5AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9E2276AA1E22A9C40045B5AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9E2276981E22A9C40045B5AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9E2276921E22A9C40045B5AB = {
+			isa = PBXGroup;
+			children = (
+				9E22769D1E22A9C40045B5AB /* MeetupAlamofire */,
+				9E22769C1E22A9C40045B5AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9E22769C1E22A9C40045B5AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9E22769B1E22A9C40045B5AB /* MeetupAlamofire.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9E22769D1E22A9C40045B5AB /* MeetupAlamofire */ = {
+			isa = PBXGroup;
+			children = (
+				9E22769E1E22A9C40045B5AB /* AppDelegate.swift */,
+				9E2276A01E22A9C40045B5AB /* ViewController.swift */,
+				9E2276A21E22A9C40045B5AB /* Main.storyboard */,
+				9E2276A51E22A9C40045B5AB /* Assets.xcassets */,
+				9E2276A71E22A9C40045B5AB /* LaunchScreen.storyboard */,
+				9E2276AA1E22A9C40045B5AB /* Info.plist */,
+			);
+			path = MeetupAlamofire;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9E22769A1E22A9C40045B5AB /* MeetupAlamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E2276AD1E22A9C40045B5AB /* Build configuration list for PBXNativeTarget "MeetupAlamofire" */;
+			buildPhases = (
+				9E2276971E22A9C40045B5AB /* Sources */,
+				9E2276981E22A9C40045B5AB /* Frameworks */,
+				9E2276991E22A9C40045B5AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MeetupAlamofire;
+			productName = MeetupAlamofire;
+			productReference = 9E22769B1E22A9C40045B5AB /* MeetupAlamofire.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9E2276931E22A9C40045B5AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Serguei Vinnitskii";
+				TargetAttributes = {
+					9E22769A1E22A9C40045B5AB = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 5W74E9U5N8;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 9E2276961E22A9C40045B5AB /* Build configuration list for PBXProject "MeetupAlamofire" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9E2276921E22A9C40045B5AB;
+			productRefGroup = 9E22769C1E22A9C40045B5AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9E22769A1E22A9C40045B5AB /* MeetupAlamofire */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9E2276991E22A9C40045B5AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E2276A91E22A9C40045B5AB /* LaunchScreen.storyboard in Resources */,
+				9E2276A61E22A9C40045B5AB /* Assets.xcassets in Resources */,
+				9E2276A41E22A9C40045B5AB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9E2276971E22A9C40045B5AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E2276A11E22A9C40045B5AB /* ViewController.swift in Sources */,
+				9E22769F1E22A9C40045B5AB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9E2276A21E22A9C40045B5AB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E2276A31E22A9C40045B5AB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9E2276A71E22A9C40045B5AB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E2276A81E22A9C40045B5AB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9E2276AB1E22A9C40045B5AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9E2276AC1E22A9C40045B5AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9E2276AE1E22A9C40045B5AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5W74E9U5N8;
+				INFOPLIST_FILE = MeetupAlamofire/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kartoshka.MeetupAlamofire;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9E2276AF1E22A9C40045B5AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5W74E9U5N8;
+				INFOPLIST_FILE = MeetupAlamofire/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kartoshka.MeetupAlamofire;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9E2276961E22A9C40045B5AB /* Build configuration list for PBXProject "MeetupAlamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E2276AB1E22A9C40045B5AB /* Debug */,
+				9E2276AC1E22A9C40045B5AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E2276AD1E22A9C40045B5AB /* Build configuration list for PBXNativeTarget "MeetupAlamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E2276AE1E22A9C40045B5AB /* Debug */,
+				9E2276AF1E22A9C40045B5AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9E2276931E22A9C40045B5AB /* Project object */;
+}
