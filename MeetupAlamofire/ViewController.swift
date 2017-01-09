@@ -14,12 +14,24 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        URLSessionManager.searchMovies(forKeyword: "Matrix") { (jsonObject: [String : Any], error: APICallError?) in
+            
+            DispatchQueue.main.async {
+                guard error == nil else {
+                    self.handleNetworkManagerErrors(networkManagerError: error!)
+                    return
+                }
+                
+                print("Returned JSON: \n \(jsonObject)")
+            }
+            
+        }
+        
     }
-
 
 }
 

@@ -12,6 +12,8 @@
 		9E2276A41E22A9C40045B5AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E2276A21E22A9C40045B5AB /* Main.storyboard */; };
 		9E2276A61E22A9C40045B5AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E2276A51E22A9C40045B5AB /* Assets.xcassets */; };
 		9E2276A91E22A9C40045B5AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E2276A71E22A9C40045B5AB /* LaunchScreen.storyboard */; };
+		9E2276B31E22AA620045B5AB /* URLSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2276B21E22AA620045B5AB /* URLSessionManager.swift */; };
+		9E2276B71E23E8510045B5AB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2276B61E23E8510045B5AB /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		9E2276A51E22A9C40045B5AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E2276A81E22A9C40045B5AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E2276AA1E22A9C40045B5AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E2276B21E22AA620045B5AB /* URLSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionManager.swift; sourceTree = "<group>"; };
+		9E2276B61E23E8510045B5AB /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,32 @@
 		9E22769D1E22A9C40045B5AB /* MeetupAlamofire */ = {
 			isa = PBXGroup;
 			children = (
-				9E22769E1E22A9C40045B5AB /* AppDelegate.swift */,
+				9E2276B41E22AACC0045B5AB /* API */,
 				9E2276A01E22A9C40045B5AB /* ViewController.swift */,
+				9E2276B61E23E8510045B5AB /* Extensions.swift */,
+				9E2276B51E22AB0F0045B5AB /* Other */,
+			);
+			path = MeetupAlamofire;
+			sourceTree = "<group>";
+		};
+		9E2276B41E22AACC0045B5AB /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9E2276B21E22AA620045B5AB /* URLSessionManager.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		9E2276B51E22AB0F0045B5AB /* Other */ = {
+			isa = PBXGroup;
+			children = (
 				9E2276A21E22A9C40045B5AB /* Main.storyboard */,
 				9E2276A51E22A9C40045B5AB /* Assets.xcassets */,
+				9E22769E1E22A9C40045B5AB /* AppDelegate.swift */,
 				9E2276A71E22A9C40045B5AB /* LaunchScreen.storyboard */,
 				9E2276AA1E22A9C40045B5AB /* Info.plist */,
 			);
-			path = MeetupAlamofire;
+			name = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +161,8 @@
 			files = (
 				9E2276A11E22A9C40045B5AB /* ViewController.swift in Sources */,
 				9E22769F1E22A9C40045B5AB /* AppDelegate.swift in Sources */,
+				9E2276B31E22AA620045B5AB /* URLSessionManager.swift in Sources */,
+				9E2276B71E23E8510045B5AB /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
