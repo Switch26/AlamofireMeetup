@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		324FB68715362800A6DDE59C /* Pods_MeetupAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346A3EBB2C0AED3DF8E1AEAD /* Pods_MeetupAlamofire.framework */; };
 		9E22769F1E22A9C40045B5AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E22769E1E22A9C40045B5AB /* AppDelegate.swift */; };
 		9E2276A11E22A9C40045B5AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2276A01E22A9C40045B5AB /* ViewController.swift */; };
 		9E2276A41E22A9C40045B5AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E2276A21E22A9C40045B5AB /* Main.storyboard */; };
@@ -14,9 +15,12 @@
 		9E2276A91E22A9C40045B5AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E2276A71E22A9C40045B5AB /* LaunchScreen.storyboard */; };
 		9E2276B31E22AA620045B5AB /* URLSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2276B21E22AA620045B5AB /* URLSessionManager.swift */; };
 		9E2276B71E23E8510045B5AB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2276B61E23E8510045B5AB /* Extensions.swift */; };
+		9E2276B91E23F7630045B5AB /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2276B81E23F7630045B5AB /* AlamofireManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22DEF4807E073C65A18B79E1 /* Pods-MeetupAlamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetupAlamofire.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeetupAlamofire/Pods-MeetupAlamofire.debug.xcconfig"; sourceTree = "<group>"; };
+		346A3EBB2C0AED3DF8E1AEAD /* Pods_MeetupAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetupAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E22769B1E22A9C40045B5AB /* MeetupAlamofire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetupAlamofire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E22769E1E22A9C40045B5AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E2276A01E22A9C40045B5AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +30,8 @@
 		9E2276AA1E22A9C40045B5AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E2276B21E22AA620045B5AB /* URLSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionManager.swift; sourceTree = "<group>"; };
 		9E2276B61E23E8510045B5AB /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9E2276B81E23F7630045B5AB /* AlamofireManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
+		A41DEE6965A42D3FDE44F1F1 /* Pods-MeetupAlamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetupAlamofire.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetupAlamofire/Pods-MeetupAlamofire.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				324FB68715362800A6DDE59C /* Pods_MeetupAlamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		110F2EDCB0A77E2E863A255F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				22DEF4807E073C65A18B79E1 /* Pods-MeetupAlamofire.debug.xcconfig */,
+				A41DEE6965A42D3FDE44F1F1 /* Pods-MeetupAlamofire.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		61707BDF42C715C521B2FCAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				346A3EBB2C0AED3DF8E1AEAD /* Pods_MeetupAlamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9E2276921E22A9C40045B5AB = {
 			isa = PBXGroup;
 			children = (
 				9E22769D1E22A9C40045B5AB /* MeetupAlamofire */,
 				9E22769C1E22A9C40045B5AB /* Products */,
+				110F2EDCB0A77E2E863A255F /* Pods */,
+				61707BDF42C715C521B2FCAA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				9E2276B21E22AA620045B5AB /* URLSessionManager.swift */,
+				9E2276B81E23F7630045B5AB /* AlamofireManager.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -93,9 +120,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9E2276AD1E22A9C40045B5AB /* Build configuration list for PBXNativeTarget "MeetupAlamofire" */;
 			buildPhases = (
+				EC3BF0FB256B6CE97DAEAD1E /* [CP] Check Pods Manifest.lock */,
 				9E2276971E22A9C40045B5AB /* Sources */,
 				9E2276981E22A9C40045B5AB /* Frameworks */,
 				9E2276991E22A9C40045B5AB /* Resources */,
+				D2FEA5396728B49C60C8337A /* [CP] Embed Pods Frameworks */,
+				823B6354B97D24E4EA6AE61F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -154,6 +184,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		823B6354B97D24E4EA6AE61F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeetupAlamofire/Pods-MeetupAlamofire-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2FEA5396728B49C60C8337A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeetupAlamofire/Pods-MeetupAlamofire-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC3BF0FB256B6CE97DAEAD1E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9E2276971E22A9C40045B5AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -162,6 +240,7 @@
 				9E2276A11E22A9C40045B5AB /* ViewController.swift in Sources */,
 				9E22769F1E22A9C40045B5AB /* AppDelegate.swift in Sources */,
 				9E2276B31E22AA620045B5AB /* URLSessionManager.swift in Sources */,
+				9E2276B91E23F7630045B5AB /* AlamofireManager.swift in Sources */,
 				9E2276B71E23E8510045B5AB /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +360,7 @@
 		};
 		9E2276AE1E22A9C40045B5AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22DEF4807E073C65A18B79E1 /* Pods-MeetupAlamofire.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5W74E9U5N8;
@@ -294,6 +374,7 @@
 		};
 		9E2276AF1E22A9C40045B5AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A41DEE6965A42D3FDE44F1F1 /* Pods-MeetupAlamofire.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5W74E9U5N8;
@@ -324,6 +405,7 @@
 				9E2276AF1E22A9C40045B5AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

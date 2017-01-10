@@ -1,0 +1,6 @@
+framework module Pods_MeetupAlamofire {
+  umbrella header "Pods-MeetupAlamofire-umbrella.h"
+
+  export *
+  module * { export * }
+}

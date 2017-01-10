@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -25,10 +27,18 @@ class ViewController: UIViewController {
                     self.handleNetworkManagerErrors(networkManagerError: error!)
                     return
                 }
-                
-                print("Returned JSON: \n \(jsonObject)")
+                print("URLSession Returned JSON: \n \(jsonObject)")
+                self.textView.text = jsonObject.description
+
             }
-            
+        }
+        
+        AlamoFireManager.searchMovies(withKeyword: "Matrix") { jsonObject in
+            DispatchQueue.main.async {
+                print("Alamofire returned JSON: \n \(jsonObject)")
+                let dictionary = jsonObject as! [String: Any]
+                //self.textView.text = dictionary.description
+            }
         }
         
     }

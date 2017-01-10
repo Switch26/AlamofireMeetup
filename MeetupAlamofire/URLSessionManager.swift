@@ -21,7 +21,7 @@ struct URLSessionManager {
     
     static func searchMovies(forKeyword keyword: String, completionHandler: @escaping (_ json: [String: Any], _ error: APICallError?) -> Void) {
         
-        let url = APIGlobalUrl + "?t=\(keyword)&y=&plot=&r=json"
+        let url = APIGlobalUrl + "?s=\(keyword)&y=&plot=&r=json"
         let jsonToReturn = [String: Any]() // empty dictionary
         
         // prepare URLSession (boilerplate code)
