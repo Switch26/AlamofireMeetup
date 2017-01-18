@@ -10,11 +10,13 @@ import UIKit
 import Alamofire
 
 struct AlamoFireManager {
+    
     static func searchMovies(withKeyword keyword: String, completionHandler: @escaping (Any)-> Void) {
         
         let url = APIGlobalUrl + "?s=\(keyword)&y=&plot=&r=json"
         
         Alamofire.request(url).responseJSON { response in
+            
             if let JSON = response.result.value {
                 completionHandler(JSON)
             }
@@ -23,3 +25,10 @@ struct AlamoFireManager {
 }
 
 
+/*
+ Alamofire.request(url).responseJSON { response in
+ if let JSON = response.result.value {
+ completionHandler(JSON)
+ }
+ }
+*/

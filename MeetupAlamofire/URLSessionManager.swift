@@ -50,9 +50,28 @@ struct URLSessionManager {
                     }
                 }
             }
+            
+
+            
+            guard error == nil else {
+                print("Error: \(error!)")
+                return completionHandler(jsonToReturn, APICallError.networkError(error!.localizedDescription))
+            }
+            
+            guard data != nil else {
+                print("Data is nil")
+                return completionHandler(jsonToReturn, APICallError.serverError)
+            }
+            
+            guard let jsonObject = try? JSONSerialization.jsonObject(with: data!) as! [String: Any] else {
+                print("Not valid JSON")
+                return completionHandler(jsonToReturn, APICallError.parsingJSONError)
+            }
+            
+            completionHandler(jsonObject, nil)
+
         }
-        task.resume()
-        
+        task.resume() 
     }
 }
 

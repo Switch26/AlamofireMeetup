@@ -39,12 +39,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="textView" destination="8kW-me-5ip" id="BVk-xc-r7e"/>
+                        <outlet property="textView" destination="8kW-me-5ip" id="EYd-0S-gKO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+            <point key="canvasLocation" x="1916" y="143"/>
         </scene>
     </scenes>
 </document>
