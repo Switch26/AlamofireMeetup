@@ -52,9 +52,9 @@ class ViewController: UIViewController {
 //            }
 //        }
         
-        AlamoFireManager.donwnloadFile { image in
+        AlamoFireManager.donwnloadFile { data in
             DispatchQueue.main.async {
-                self.imageView.image = image
+                self.imageView.image = UIImage(data: data)
             }
         }
     }
