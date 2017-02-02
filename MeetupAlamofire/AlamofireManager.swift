@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 
 struct AlamoFireManager {
     
@@ -15,12 +16,60 @@ struct AlamoFireManager {
         
         let url = APIGlobalUrl + "?s=\(keyword)&y=&plot=&r=json"
         
-        Alamofire.request(url).responseJSON { response in
+        let parameters: Parameters = ["something": "anything"]
+        let headers: HTTPHeaders = [
+            "Authorization": "Basic",
+            "Accept": "application/json"
+        ]
+        
+        Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: headers).validate().responseJSON { response in
             
-            if let JSON = response.result.value {
-                completionHandler(JSON)
+            let responseCode = response.response?.statusCode
+            print("Response code: \(responseCode)")
+            
+            switch response.result {
+            case .success:
+                print("Validation successfull");
+                if let JSON = response.result.value {
+                    completionHandler(JSON)
+                }
+            case .failure(let error):
+                print(error.localizedDescription);
             }
         }
+    }
+    
+    static func donwnloadFile(completionHanlder: @escaping (_ image: UIImage) -> Void) {
+        
+        let link = "http://dreamatico.com/data_images/kitten/kitten-2.jpg"
+        
+//        Alamofire.download(link).responseData { response  in
+//            
+//            print("Response: \(response)")
+//            
+//            if let data = response.result.value {
+//                print("response.result.value - \(response.result.value)")
+//                completionHanlder(data)
+//            }
+//        }
+        
+        Alamofire.request(link).responseImage { response in
+            
+            debugPrint(response)
+            
+            print(response.request)
+            print(response.response)
+            debugPrint(response.result)
+            
+            
+            if let image = response.result.value {
+                print("image downloaded: \(image)")
+                completionHanlder(image)
+            }
+        }
+        
+        //let destination = DownloadRequest.suggestedDownloadDestination(for: .documentDirectory)
+
     }
 }
 

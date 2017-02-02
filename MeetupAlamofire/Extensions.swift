@@ -20,12 +20,8 @@ extension UIAlertController {
     }
 }
 
-protocol CanHandleNetworkManagerErrors {
-    func handleNetworkManagerErrors(networkManagerError: APICallError)
-}
 
-// details: http://krakendev.io/blog/subclassing-can-suck-and-heres-why
-extension UIViewController: CanHandleNetworkManagerErrors {
+extension UIViewController {
     func handleNetworkManagerErrors(networkManagerError: APICallError) {
         
         switch networkManagerError {

@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,26 +21,42 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        URLSessionManager.searchMovies(forKeyword: "Matrix") { (jsonObject: [String : Any], error: APICallError?) in
-            
+//        URLSessionManager.searchMovies(forKeyword: "Matrix") { (jsonObject: [String : Any], error: APICallError?) in
+//            
+//            DispatchQueue.main.async {
+//                guard error == nil else {
+//                    
+//                    switch error! {
+//                    case .networkError(let networkErrorDescription):
+//                        let networkErrorAlert = UIAlertController.simpleAlert(withTitle: "Error", message: networkErrorDescription)
+//                        self.present(networkErrorAlert, animated: true, completion: nil)
+//                    case .serverError:
+//                        let serverErrorAlert = UIAlertController.simpleAlert(withTitle: "Error", message: "Server didn't respond")
+//                        self.present(serverErrorAlert, animated: true, completion: nil)
+//                    case .parsingJSONError:
+//                        break
+//                    }
+//                    
+//                    //self.handleNetworkManagerErrors(networkManagerError: error!)
+//                    return
+//                }
+//                self.textView.text = jsonObject.description
+//            }
+//        }
+        
+//        AlamoFireManager.searchMovies(withKeyword: "Matrix") { jsonObject in
+//            DispatchQueue.main.async {
+//                print("Alamofire returned JSON: \n \(jsonObject)")
+//                let dictionary = jsonObject as! [String: Any]
+//                self.textView.text = dictionary.description
+//            }
+//        }
+        
+        AlamoFireManager.donwnloadFile { image in
             DispatchQueue.main.async {
-                guard error == nil else {
-                    self.handleNetworkManagerErrors(networkManagerError: error!)
-                    return
-                }
-                //print("URLSession Returned JSON: \n \(jsonObject)")
-                self.textView.text = jsonObject.description
+                self.imageView.image = image
             }
         }
-        
-        AlamoFireManager.searchMovies(withKeyword: "Matrix") { jsonObject in
-            DispatchQueue.main.async {
-                //print("Alamofire returned JSON: \n \(jsonObject)")
-                //let dictionary = jsonObject as! [String: Any]
-                //self.textView.text = dictionary.description
-            }
-        }
-        
     }
 
 }
