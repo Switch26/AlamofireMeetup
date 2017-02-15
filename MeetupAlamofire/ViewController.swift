@@ -22,15 +22,36 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
 
         URLSessionManager.searchMovies(forKeyword: "Matrix") { (jsonObject: [String : Any], error: APICallError?) in
+            
             DispatchQueue.main.async {
+                guard error == nil else {
+                    
+                    switch error! {
+                    case .networkError(let networkErrorDescription):
+                        let networkErrorAlert = self.simpleAlert(withTitle: "Error", message: networkErrorDescription)
+                        self.present(networkErrorAlert, animated: true, completion: nil)
+                    case .serverError:
+                        let serverErrorAlert = self.simpleAlert(withTitle: "Error", message: "Server didn't respond")
+                        self.present(serverErrorAlert, animated: true, completion: nil)
+                    case .parsingJSONError:
+                        break
+                    }
+                    return
+                }
                 self.textView.text = jsonObject.description
-                
             }
         }
         
         
-        
     }
 
+    
+    func simpleAlert(withTitle title: String, message: String) -> UIAlertController {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+        }
+        alertController.addAction(OKAction)
+        return alertController
+    }
 }
 
