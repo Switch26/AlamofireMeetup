@@ -1,0 +1,11 @@
+beginning
+URLSessionManager
+URLSessionManager+VCUpdate
+replaceIfLet
+APICallError
+APICallError+VCUpdate
+UIAlertViewExtension
+
+AlamofireManager
+validate
+download
