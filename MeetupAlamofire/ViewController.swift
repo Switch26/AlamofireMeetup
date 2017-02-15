@@ -51,12 +51,6 @@ class ViewController: UIViewController {
                 self.textView.text = dictionary.description
             }
         }
-        
-        AlamoFireManager.donwnloadFile { data in
-            DispatchQueue.main.async {
-                self.imageView.image = UIImage(data: data)
-            }
-        }
     }
 
 }
