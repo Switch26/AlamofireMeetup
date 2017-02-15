@@ -1,0 +1,2 @@
+let APIGlobalUrl = "http://www.omdbapi.com/"
+let url = APIGlobalUrl + "?s=\(keyword)&y=&plot=&r=json"
