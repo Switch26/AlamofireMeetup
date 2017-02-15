@@ -38,19 +38,4 @@ struct AlamoFireManager {
             }
         }
     }
-    
-    static func donwnloadFile(completionHanlder: @escaping (_ data: Data) -> Void) {
-        
-        let link = "http://dreamatico.com/data_images/kitten/kitten-2.jpg"
-        
-        Alamofire.download(link).responseData { response  in
-            
-            print("Response: \(response)")
-            
-            if let data = response.result.value {
-                print("response.result.value - \(response.result.value)")
-                completionHanlder(data)
-            }
-        }
-    }
 }
