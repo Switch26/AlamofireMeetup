@@ -21,13 +21,14 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        URLSessionManager.searchMovies(forKeyword: "Matrix") { (jsonObject: [String : Any]) in
-            
+        URLSessionManager.searchMovies(forKeyword: "Matrix") { (jsonObject: [String : Any], error: APICallError?) in
             DispatchQueue.main.async {
                 self.textView.text = jsonObject.description
-
+                
             }
         }
+        
+        
         
     }
 

@@ -10,15 +10,22 @@ import Foundation
 
 let APIGlobalUrl = "http://www.omdbapi.com/"
 
+enum APICallError: Error {
+    case networkError(String)
+    case parsingJSONError
+    case serverError
+}
+
 struct URLSessionManager {
     
-    static func searchMovies(forKeyword keyword: String, completionHandler: @escaping (_ json: [String: Any]) -> Void) {
+    static func searchMovies(forKeyword keyword: String, completionHandler: @escaping (_ json: [String: Any], _ error: APICallError?) -> Void) {
         
         let url = APIGlobalUrl + "?s=\(keyword)&y=&plot=&r=json"
         let jsonToReturn = [String: Any]() // empty dictionary
         
-        let formattedString = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        let formatedURL = URL(string: formattedString)!
+        // prepare URLSession (boilerplate code)
+        let formatedString = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        let formatedURL = URL(string: formatedString)!
         var request = URLRequest(url: formatedURL)
         request.httpMethod = "GET"
         let session = URLSession.shared
@@ -27,24 +34,23 @@ struct URLSessionManager {
             
             guard error == nil else {
                 print("Error: \(error!)")
-                return completionHandler(jsonToReturn)
+                return completionHandler(jsonToReturn, APICallError.networkError(error!.localizedDescription))
             }
             
             guard data != nil else {
                 print("Data is nil")
-                return completionHandler(jsonToReturn)
+                return completionHandler(jsonToReturn, APICallError.serverError)
             }
             
             guard let jsonObject = try? JSONSerialization.jsonObject(with: data!) as! [String: Any] else {
                 print("Not valid JSON")
-                return completionHandler(jsonToReturn)
+                return completionHandler(jsonToReturn, APICallError.parsingJSONError)
             }
             
-            completionHandler(jsonObject)
+            completionHandler(jsonObject, nil)
             
         }
         task.resume()
-        
     }
-    
 }
+
