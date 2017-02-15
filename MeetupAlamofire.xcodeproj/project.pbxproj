@@ -15,6 +15,7 @@
 		9E2276A91E22A9C40045B5AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E2276A71E22A9C40045B5AB /* LaunchScreen.storyboard */; };
 		9E67A3DC1E55036D00E0C2F9 /* URLSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E67A3DB1E55036D00E0C2F9 /* URLSessionManager.swift */; };
 		9E67A3DE1E55168000E0C2F9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E67A3DD1E55168000E0C2F9 /* Extensions.swift */; };
+		9E67A3E01E55180000E0C2F9 /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E67A3DF1E55180000E0C2F9 /* AlamofireManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		9E2276AA1E22A9C40045B5AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E67A3DB1E55036D00E0C2F9 /* URLSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionManager.swift; sourceTree = "<group>"; };
 		9E67A3DD1E55168000E0C2F9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9E67A3DF1E55180000E0C2F9 /* AlamofireManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
 		A41DEE6965A42D3FDE44F1F1 /* Pods-MeetupAlamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetupAlamofire.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetupAlamofire/Pods-MeetupAlamofire.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				9E67A3DB1E55036D00E0C2F9 /* URLSessionManager.swift */,
+				9E67A3DF1E55180000E0C2F9 /* AlamofireManager.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				9E67A3DC1E55036D00E0C2F9 /* URLSessionManager.swift in Sources */,
 				9E2276A11E22A9C40045B5AB /* ViewController.swift in Sources */,
 				9E22769F1E22A9C40045B5AB /* AppDelegate.swift in Sources */,
+				9E67A3E01E55180000E0C2F9 /* AlamofireManager.swift in Sources */,
 				9E67A3DE1E55168000E0C2F9 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
