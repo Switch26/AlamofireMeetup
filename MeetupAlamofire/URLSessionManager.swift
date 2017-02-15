@@ -24,8 +24,9 @@ struct URLSessionManager {
         let session = URLSession.shared
         
         let task = session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+            
             if error != nil {
-                print("Error: \(error)")
+                print("Error: \(error!)")
                 completionHandler(jsonToReturn)
             } else {
                 if data == nil {
@@ -33,11 +34,17 @@ struct URLSessionManager {
                     completionHandler(jsonToReturn)
                 } else {
                     do {
-                        let jsonToReturn = try JSONSerialization .jsonObject(with: data!)
+                        let jsonToReturn = try JSONSerialization .jsonObject(with: data!) as! [String: Any]
+                        print(jsonToReturn)
+                        completionHandler(jsonToReturn)
+                    } catch {
+                        print("Not valid JSON")
+                        completionHandler(jsonToReturn)
                     }
                 }
             }
         }
+        task.resume()
         
     }
     
