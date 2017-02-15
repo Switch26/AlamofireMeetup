@@ -28,14 +28,16 @@ class ViewController: UIViewController {
                     
                     switch error! {
                     case .networkError(let networkErrorDescription):
-                        let networkErrorAlert = self.simpleAlert(withTitle: "Error", message: networkErrorDescription)
+                        let networkErrorAlert = UIAlertController.simpleAlert(withTitle: "Error", message: networkErrorDescription)
                         self.present(networkErrorAlert, animated: true, completion: nil)
                     case .serverError:
-                        let serverErrorAlert = self.simpleAlert(withTitle: "Error", message: "Server didn't respond")
+                        let serverErrorAlert = UIAlertController.simpleAlert(withTitle: "Error", message: "Server didn't respond")
                         self.present(serverErrorAlert, animated: true, completion: nil)
                     case .parsingJSONError:
                         break
                     }
+                    
+                    //self.handleNetworkManagerErrors(networkManagerError: error!)
                     return
                 }
                 self.textView.text = jsonObject.description
