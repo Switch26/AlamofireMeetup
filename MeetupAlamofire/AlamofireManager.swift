@@ -16,7 +16,7 @@ struct AlamoFireManager {
         
         let url = APIGlobalUrl + "?s=\(keyword)&y=&plot=&r=json"
         
-        let parameters: Parameters = ["something": "anything"]
+        let parameters: Parameters = ["sort": "ascending"]
         let headers: HTTPHeaders = [
             "Authorization": "Basic",
             "Accept": "application/json"
@@ -52,32 +52,5 @@ struct AlamoFireManager {
                 completionHanlder(data)
             }
         }
-        
-//        Alamofire.request(link).responseImage { response in
-//            
-//            debugPrint(response)
-//            
-//            print(response.request)
-//            print(response.response)
-//            debugPrint(response.result)
-//            
-//            
-//            if let image = response.result.value {
-//                print("image downloaded: \(image)")
-//                completionHanlder(image)
-//            }
-//        }
-        
-        //let destination = DownloadRequest.suggestedDownloadDestination(for: .documentDirectory)
-
     }
 }
-
-
-/*
- Alamofire.request(url).responseJSON { response in
- if let JSON = response.result.value {
- completionHandler(JSON)
- }
- }
-*/
