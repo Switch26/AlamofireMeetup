@@ -25,24 +25,23 @@ struct URLSessionManager {
         
         let task = session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
             
-            if error != nil {
+            guard error == nil else {
                 print("Error: \(error!)")
-                completionHandler(jsonToReturn)
-            } else {
-                if data == nil {
-                    print("Data is nil")
-                    completionHandler(jsonToReturn)
-                } else {
-                    do {
-                        let jsonToReturn = try JSONSerialization .jsonObject(with: data!) as! [String: Any]
-                        print(jsonToReturn)
-                        completionHandler(jsonToReturn)
-                    } catch {
-                        print("Not valid JSON")
-                        completionHandler(jsonToReturn)
-                    }
-                }
+                return completionHandler(jsonToReturn)
             }
+            
+            guard data != nil else {
+                print("Data is nil")
+                return completionHandler(jsonToReturn)
+            }
+            
+            guard let jsonObject = try? JSONSerialization.jsonObject(with: data!) as! [String: Any] else {
+                print("Not valid JSON")
+                return completionHandler(jsonToReturn)
+            }
+            
+            completionHandler(jsonObject)
+            
         }
         task.resume()
         
