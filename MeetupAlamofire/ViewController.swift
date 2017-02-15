@@ -21,14 +21,22 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        URLSessionManager.searchMovies(forKeyword: "Matrix") { (jsonObject: [String : Any], error: APICallError?) in
-            
+//        URLSessionManager.searchMovies(forKeyword: "Matrix") { (jsonObject: [String : Any], error: APICallError?) in
+//            
+//            DispatchQueue.main.async {
+//                guard error == nil else {
+//                    self.handleNetworkManagerErrors(networkManagerError: error!)
+//                    return
+//                }
+//                self.textView.text = jsonObject.description
+//            }
+//        }
+        
+        AlamoFireManager.searchMovies(withKeyword: "Matrix") { jsonObject in
             DispatchQueue.main.async {
-                guard error == nil else {
-                    self.handleNetworkManagerErrors(networkManagerError: error!)
-                    return
-                }
-                self.textView.text = jsonObject.description
+                print("Alamofire returned JSON: \n \(jsonObject)")
+                let dictionary = jsonObject as! [String: Any]
+                self.textView.text = dictionary.description
             }
         }
         
